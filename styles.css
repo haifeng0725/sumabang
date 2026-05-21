@@ -351,13 +351,14 @@ p {
 .console-metric span {
   margin-top: 8px;
   color: var(--cyan);
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 800;
   word-break: keep-all;
 }
 
 .no-break,
-.formula-line {
+.formula-line,
+.formula-mini {
   white-space: nowrap;
 }
 
@@ -726,6 +727,11 @@ p {
   max-width: 760px;
 }
 
+.contact-title span {
+  display: block;
+  text-align: left;
+}
+
 .contact-card > div:first-child p:not(.eyebrow) {
   margin-top: 16px;
   max-width: 720px;
@@ -749,7 +755,7 @@ p {
 .contact-info {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: 1.15fr .85fr 1fr;
+  grid-template-columns: 1fr;
   gap: 12px;
   margin: 4px 0 0;
 }
@@ -812,15 +818,20 @@ p {
   object-position: center;
 }
 
-.wechat-box dd {
+.contact-qr {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  width: 100%;
+  padding: 14px;
+  background: rgba(255,255,255,.055);
+  border: 1px solid rgba(54, 215, 255, .18);
+  border-radius: 8px;
 }
 
-.wechat-box img {
-  width: 82px;
-  height: 82px;
+.contact-qr img {
+  width: 92px;
+  height: 92px;
   padding: 6px;
   object-fit: contain;
   background: #fff;
@@ -828,9 +839,10 @@ p {
   box-shadow: 0 12px 28px rgba(0, 0, 0, .22);
 }
 
-.wechat-box span {
+.contact-qr span {
   color: var(--white);
   font-weight: 800;
+  line-height: 1.45;
 }
 
 .float-call {
